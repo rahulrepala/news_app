@@ -1,16 +1,44 @@
 # news_app
+an app for showing latest news using apis from the website- https://newsapi.org/
 
-A new Flutter project.
+used two apis-
+1. eveything api (https://newsapi.org/docs/endpoints/everything) for showing all news
+2. headlines api (https://newsapi.org/docs/endpoints/top-headlines) for showing top-headlines
 
-## Getting Started
+Features-
 
-This project is a starting point for a Flutter application.
+checks internet connection.
 
-A few resources to get you started if this is your first Flutter project:
+filter option - we can choose only articles written by particular author
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+search option - shows news with particular title which is entered in search textfield
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+favourites - we can save news to to view it later. there is a seperate tab you can see saved articles over there.
+
+How favourites work -
+
+you need to click on ❤️ symbol it will be saved to your local db. 
+if you are again clicking the ❤️ symbol it says it is already saved.
+now you can see your saved news in your favourites tab
+
+Internet Connection-
+
+Checks wether app is connected to internet or not. 
+if it is not connected to internet it asks for switchiting it on. 
+after switching on internet click 'Check Now' button to check connectivity. 
+if connection is proper it will load the app.
+
+
+Technologies used-
+
+Sqflite - for storing locally
+
+flutter_bloc - for statemanagement
+
+flutter_dotenv - for storing environment variables.
+
+webview_flutter - for showing the whole article.
+
+
+
+
